@@ -1,25 +1,18 @@
-//  navbar functoin
-$(document).ready(function() {
+$(document).ready(function(){
 
-    $('.fa-bars').click(function() {
+    $('.fa-bars').click(function(){
         $(this).toggleClass('fa-times');
         $('.navbar').toggleClass('nav-toggle');
-
     });
-
-    $(window).on('scroll load', function() {
+    $(window).on('scroll load',function(){
         $('.fa-bars').removeClass('fa-times');
         $('.navbar').removeClass('nav-toggle');
 
-        if ($(window).scrolltop() > 30) {
+        if($(window).scrollTop()>30){
             $('header').addClass('header-active');
-        } else {
+
+        }else{
             $('header').removeClass('header-active');
         }
-
-
-
     });
-
-
 });
